@@ -1,13 +1,8 @@
 *** Settings ***
 Documentation        Resource com as implementações das KW da suitWebTesting
+Resource             variablesDesafioSovos.robot
 Library              SeleniumLibrary
 Library              String
-
-*** Variables ***
-${URL}       http://automationpractice.com/index.php
-${NAME}      Thiago
-${LASTMANE}  Taka
-
 
 *** Keywords ***
 ## ---- SETUP
@@ -17,3 +12,8 @@ Abrir o navegador
 ## ---- TEARDOWN
 Fechar o navegador
     Close Browser
+
+## ---- STEPS
+Access the home page website
+    Go To    ${URL}
+    Wait Until Element Is Visible  ${CHECK_HOME_PAGE}
