@@ -6,11 +6,11 @@ Library              String
 
 *** Keywords ***
 ## ---- SETUP
-Abrir o navegador
+Opening Browser
     Open Browser  browser=chrome
 
 ## ---- TEARDOWN
-Fechar o navegador
+Closing Browser
     Close Browser
 
 ## ---- STEPS
@@ -30,5 +30,15 @@ Check if the product "${PRODUCT1}" is listed in the website
     Page Should Contain Image    ${IMAGE_PRDT}
 
 Select the choosen product
-    Mouse Over    ${SRC_PRODUCT}
-    Click Button    ${SRC_PRODUCT}
+    Mouse Over    ${SRC_PRDT}
+    Click Element    ${SRC_PRDT}
+
+Choose valid quantity
+    Wait Until Element Is Visible    ${PRDT_CHSEN} 
+    Mouse Over      ${PRDT_CHSEN}
+    Click Element    ${PRDT_CHSEN}
+    Wait Until Element Is Visible    ${FILTER}
+    Click Button    ${BTN_ADD}
+
+    
+    
