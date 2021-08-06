@@ -20,4 +20,6 @@ Case Test 02: Add valid quantity of the product to the cart
     Click on button to search
     Check if the product "Playstation 5" is listed in the website
     Select the choosen product
-    Choose valid quantity
+    Choose quantity 1
+    Delete quantity from cart
+    Check empty cart
